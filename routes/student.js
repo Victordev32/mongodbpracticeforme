@@ -40,13 +40,13 @@ router.put("/students/:id",async (req,res)=>{
     let upid=req.params.id
     console.log(upbody)
     let data=await Student.findByIdAndUpdate(upid,upbody);
-    res.json(data)
+    res.json({msg: "updated succesfully"})
 })
 router.delete('/students/:id', async (req,res)=>{
     let id=req.params.id
     let data=await Student.findByIdAndDelete(id)
 
-    res.json(data)
+    res.json({msg: "deleted successfully"})
 })
 
 module.exports=router

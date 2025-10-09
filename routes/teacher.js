@@ -9,12 +9,26 @@ router.get('/teachers',async (req,res)=>{
     res.json(data)
 })
 
-router.post('/teacher',async (req,res)=>{
+router.get('/teachers/:id',async (req,res)=>{
+     let id=req.params.id
+     let data=await Teacher.findById(id)
+
+     res.json(data)
+})
+router.post('/teachers',async (req,res)=>{
     let {name,age,email,gender}=req.body
 
     let data=await Teacher.create({name,age,email,gender})
 
-    res.json({msg: "received"})
+    res.json({msg: "success"})
 })
 
+
+router.put('/teachers/:id',async (req,res)=>{
+    let  upid=req.params.id
+    let updata=req.body
+    let data=await Teacher.findByIdAndUpdate(upid,updata)
+
+    res.json({msg: "success"})
+})
 module.exports=router
