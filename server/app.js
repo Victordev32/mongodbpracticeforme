@@ -1,7 +1,7 @@
 const express=require('express')
 const {dbconnect}=require('./db')
 const cors=require("cors")
-const Student=require("./models/studentModel")
+
 const teacherRoute=require('./routes/teacher')
 const studentRoute=require('./routes/student')
 
