@@ -20,8 +20,8 @@ const Header = () => {
   return (
     <>
     
-      <div className='flex flex-row bg-green-400 h-10 item-center justify-between'>
-        <div className="font-bold px-5 text-xl">
+      <div className='w-full flex flex-row bg-green-400 h-10 item-center justify-between'>
+        <div className="font-bold px-5 text-xl text-white">
            Simple school
         </div>
         <div className='flex md:flex-row flex-column justify-between item-center'>

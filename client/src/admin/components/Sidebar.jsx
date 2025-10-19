@@ -18,8 +18,12 @@ const Sidebar = () => {
     
     <>
     <aside className='bg-green-400    bottom-0 top-10 fixed  h-full'>
-      <button className='text-center 'onClick={showSidebar}><FontAwesomeIcon  icon={faBars}></FontAwesomeIcon></button>
-     <nav className='flex flex-col'>
+      <div className='text-start text-white text-lg m-1'>
+          
+      <button className='text-center md:hidden'onClick={showSidebar}><FontAwesomeIcon  icon={faBars}></FontAwesomeIcon></button>
+     
+      </div>
+      <nav className='flex flex-col text-white'>
          <NavLink  to="/" className={`m-1 p-1 `}>< FontAwesomeIcon   icon={faList}/><span className={`${show?"inline":"hidden"} md:inline`}>Dashboard</span></NavLink>
          <Link to="/students" className='m-1 p-1'>< FontAwesomeIcon  icon={faMortarBoard}/><span className={`${show?"inline":"hidden"} md:inline`}>Students</span></Link>
         <Link to="/teachers" className='m-1 p-1'>< FontAwesomeIcon  icon={faPersonChalkboard}/><span className={`${show?"inline":"hidden"} md:inline`}>Teachers</span></Link>
