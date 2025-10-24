@@ -1,11 +1,22 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import SignHeader from './SignHeader'
-import { Outlet } from 'react-router-dom'
+import { Outlet, useLocation } from 'react-router-dom'
 
 const Auth = () => {
+    const [route,setRoute]=useState('')
+  const location=useLocation();
+  useEffect(checkRoute,[location]);
+
+  function checkRoute(){
+    console.log(location.pathname)
+    setRoute(location.pathname);
+  }
+
+
+
   return (
     <div>
-    <SignHeader/>
+    <SignHeader route={route}/>
    <Outlet/>
     </div>
   )
