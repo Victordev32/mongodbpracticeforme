@@ -35,7 +35,7 @@ const userSchema=mongoose.Schema({
             enum: ['male','female'],
             default: "male"
         },
-        gender: {
+        usertype: {
             type: String,
             enum: ['student','teacher','admin'],
             default: "student"

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import SignHeader from './SignHeader'
 import { Outlet, useLocation } from 'react-router-dom'
+import Signin from './Signin'
 
 const Auth = () => {
     const [route,setRoute]=useState('')
